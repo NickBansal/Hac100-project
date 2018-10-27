@@ -1,2 +1,3 @@
-# Hac100-Bad-Basket-Front-End
-HAC100 Project
+# Bad Basket Front End
+
+Repo for Hack Manchester 2018 prokject
