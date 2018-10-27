@@ -10,7 +10,6 @@ import Navigation from './components/Navigation';
 import ProductList from './components/ProductList';
 import ProductNews from './components/ProductNews';
 
-
 class App extends Component {
 
   render() {
