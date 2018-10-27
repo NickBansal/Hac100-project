@@ -8,6 +8,7 @@ import {
 } from 'reactstrap';
 import Navigation from './components/Navigation';
 import ProductList from './components/ProductList';
+import ProductNews from './components/ProductNews';
 
 
 class App extends Component {
@@ -36,6 +37,7 @@ class App extends Component {
                     <ProductList />
                   } /> />
             </Switch>
+            <ProductNews />
             </main>
           </Col>
         </Row>
