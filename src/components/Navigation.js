@@ -18,7 +18,7 @@ class Navigation extends Component {
   render() {
     return (
       <div>
-        <Navbar color="dark" dark align-left expand="md">
+        <Navbar color="dark" dark expand="md">
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
