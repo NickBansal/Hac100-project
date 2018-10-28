@@ -1,4 +1,5 @@
 import React from 'react';
+import './ProductNews.css';
 
 const fakeNews = {
     title: "Fake News Title",
@@ -7,7 +8,7 @@ const fakeNews = {
 
 const ProductNews = () => {
     return (
-        <div>
+        <div className="FakeNews">
             <h1>{fakeNews.title}</h1>
             <p>{fakeNews.story}</p>
         </div>
