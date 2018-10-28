@@ -11,8 +11,29 @@ import ProductList from './components/ProductList';
 
 class App extends Component {
 
-  render() {
+  state = {
+    products: [
+      {
+        _id: "tv",
+        name: "Samsung Smart TV",
+        description: "sometext about the TV",
+        price: 499.99,
+        category: "electrical",
+        imgUrl: "https://images-na.ssl-images-amazon.com/images/I/51qxxr9N2XL.jpg"
+      },
+      {
+        _id: "coconut",
+        name: "Coconut Oil",
+        description: "Some text about coconut oil",
+        price: 8.99,
+        category: "grocery",
+        imgUrl: "https://images-na.ssl-images-amazon.com/images/I/61hNyqGFlaL._SL1500_.jpg"
+      }
+    ]
+  }
 
+  render() {
+    const { products } = this.state;
     return (
       <Container>
         <Row>
@@ -32,7 +53,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/"
                   render={({ match }) =>
-                    <ProductList />
+                    <ProductList products={products} />
                   } /> />
             </Switch>
             </main>

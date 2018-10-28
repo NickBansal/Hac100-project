@@ -13,43 +13,38 @@ import {
 
 class ProductList extends Component {
   render() {
+    const { products } = this.props;
     return (
       <div>
         <CardColumns>
-          {/* for each product */}
-          <Card>
-            <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-            <CardBody>
-              <CardTitle>Product Name</CardTitle>
-              <CardSubtitle>&pound;199.99</CardSubtitle>
-              <CardText>Here's some info about this product</CardText>
-            </CardBody>
-            <CardFooter>
-              <Button color="primary">Don't buy now</Button>
-            </CardFooter>
-          </Card>
-          <Card>
-            <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-            <CardBody>
-              <CardTitle>Product Name</CardTitle>
-              <CardSubtitle>&pound;199.99</CardSubtitle>
-              <CardText>Here's some info about this product</CardText>
-            </CardBody>
-            <CardFooter>
-              <Button color="primary">Don't buy now</Button>
-            </CardFooter>
-          </Card>
-          <Card>
-            <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-            <CardBody>
-              <CardTitle>Product Name</CardTitle>
-              <CardSubtitle>&pound;199.99</CardSubtitle>
-              <CardText>Here's some info about this product</CardText>
-            </CardBody>
-            <CardFooter>
-              <Button color="primary">Don't buy now</Button>
-            </CardFooter>
-          </Card>
+
+          {
+            products.map(product => {
+              return (
+                <Card key={product._id}>
+                  <CardImg top width="100%"
+                    src={product.imgUrl}
+                    alt={product.name} />
+                  <CardBody>
+                    <CardTitle>
+                      {product.name}
+                    </CardTitle>
+                    <CardSubtitle>
+                      &pound;{product.price}
+                    </CardSubtitle>
+                    <CardText>
+                      {product.description}
+                    </CardText>
+                  </CardBody>
+                  <CardFooter>
+                    <Button color="primary">
+                      Don't Buy Now
+                    </Button>
+                  </CardFooter>
+                </Card>
+              )
+            })
+          }
         </CardColumns>
       </div>
     );
