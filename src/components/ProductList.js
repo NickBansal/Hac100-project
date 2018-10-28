@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import ProductNews from './ProductNews';
-import './ProductNews.css'
+import './ProductList.css'
 import {
   Card,
   CardBody,

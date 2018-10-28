@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ProductNews.css'
 import {
   Button,
   Modal,
@@ -55,8 +56,8 @@ class ProductButton extends Component {
               <ModalHeader>{review.title}</ModalHeader>
               <ModalBody>{review.body}</ModalBody>
               <ModalFooter>
-                <Button color="primary" onClick={this.toggleNested}>Done</Button>
-                <Button color="secondary" onClick={this.toggleAll}>All Done</Button>
+                <Button color="danger" onClick={this.toggleNested}>Yes</Button>
+                <Button color="primary" onClick={this.toggleAll}>No</Button>
               </ModalFooter>
             </Modal>
           </ModalBody>
