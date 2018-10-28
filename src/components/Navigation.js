@@ -26,10 +26,10 @@ class Navigation extends Component {
                 <NavLink tag={Link} to="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/">Cat 1</NavLink>
+                <NavLink tag={Link} to="/">Electricals</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/">Cat 2</NavLink>
+                <NavLink tag={Link} to="/">Groceries</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink tag={Link} to="/">Basket</NavLink>
