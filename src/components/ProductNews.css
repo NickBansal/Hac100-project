@@ -1,0 +1,19 @@
+.FakeNews {
+    text-align: center;
+}
+
+.FakeNews h1 {
+    background: red;
+    color: green;
+    font-size: 44px;
+}
+
+div.modal-body {
+    padding: 0;
+}
+
+.YesPlease {
+    width: 100%;
+    background: orange;
+    color: red;
+}
