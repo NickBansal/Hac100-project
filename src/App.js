@@ -29,6 +29,14 @@ class App extends Component {
         price: 8.99,
         category: "grocery",
         imgUrl: "https://images-na.ssl-images-amazon.com/images/I/61hNyqGFlaL._SL1500_.jpg"
+      },
+      {
+        _id: "iPhoneCase",
+        name: "iPhone Waterproof Case",
+        description: "Some text about the phone case",
+        price: 12.99,
+        category: "electrical",
+        imgUrl: "https://images-na.ssl-images-amazon.com/images/I/41jU2qpxvOL.jpg"
       }
     ]
   }
