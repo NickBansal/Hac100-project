@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProductNews from './ProductNews';
+import './ProductNews.css'
 import {
   Button,
   Card,
@@ -29,8 +30,8 @@ class ProductList extends Component {
       // bottom: 'auto',
       // marginRight: '-50%',
       // transform: 'translate(-50%, -50%)',
-      width: '400px',
-      height: '400px', 
+      width: '120px',
+      height: '800px', 
       overflow: 'scroll' 
     }
 
@@ -73,24 +74,23 @@ class ProductList extends Component {
           </Card>
         </CardColumns>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} style={customStyles}>
-          <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+          <ModalHeader toggle={this.toggle}>Are you sure you want to buy this? - LOL</ModalHeader>
           <ModalBody>
           <ProductNews />
             
-            <Button color="success" onClick={this.toggleNested}>Show Nested Modal</Button>
+            <Button className="YesPlease" color="danger" onClick={this.toggleNested}>YES, please!</Button>
 
             <Modal isOpen={this.state.nestedModal} toggle={this.toggleNested} onClosed={this.state.closeAll ? this.toggle : undefined}>
-              <ModalHeader>Nested Modal title</ModalHeader>
-              <ModalBody>Stuff and things</ModalBody>
+              <ModalHeader>Like... are you proper sure? - LOL</ModalHeader>
+              <ModalBody>Banging your head against a wall for an hour burns 150 calories</ModalBody>
               <ModalFooter>
-                <Button color="primary" onClick={this.toggleNested}>Done</Button>{' '}
+                <Button color="primary" onClick={this.toggleNested}>Done</Button>
                 <Button color="secondary" onClick={this.toggleAll}>All Done</Button>
               </ModalFooter>
             </Modal>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+            {!this.state.nestedModal && <Button color="danger" onClick={this.toggle} disabled>LOSER</Button> }{' '}
           </ModalFooter>
         </Modal>
       </div>
