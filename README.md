@@ -7,3 +7,5 @@ Our task was to create a webpage which made the user experience difficult and th
 We had 24 hours to create an idea and exucte it. 
 
 This is the project we created for which we were nomited for the best students project.
+
+The deployed project can be found on https://jovial-kirch-2065fb.netlify.com/
